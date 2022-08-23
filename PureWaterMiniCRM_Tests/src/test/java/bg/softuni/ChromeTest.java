@@ -52,10 +52,9 @@ public class ChromeTest {
 
         URL driverURL = classLoader.getResource(CHROME_DRIVER_FILE_NAME);
 
-        //TODO: Compile time error - can't find class java.util.function.Supplier
-//        if (driverURL == null) {
-//            Assertions.fail("Unable to locate chrome driver");
-//        }
+        if (driverURL == null) {
+            Assertions.fail("Unable to locate chrome driver");
+        }
 
         return driverURL.getFile();
     }
