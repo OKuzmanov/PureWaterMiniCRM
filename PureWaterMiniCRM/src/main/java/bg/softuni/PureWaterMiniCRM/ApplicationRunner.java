@@ -123,22 +123,22 @@ public class ApplicationRunner implements CommandLineRunner {
         }
 
         if(productService.isRepoEmpty()) {
-            Product p1 = new Product(random.nextInt(1, 150), ProductCategoryEnum.HALF_LITRE, LocalDateTime.now());
-            Product p2 = new Product(random.nextInt(1, 150), ProductCategoryEnum.LITRE_AND_HALF, LocalDateTime.now());
-            Product p3 = new Product(random.nextInt(1, 150), ProductCategoryEnum.TEN_LITRES, LocalDateTime.now());
-            Product p4 = new Product(random.nextInt(1, 150), ProductCategoryEnum.NINETEEN_LITRES, LocalDateTime.now());
+            Product p1 = new Product(random.nextInt(1, 15), ProductCategoryEnum.HALF_LITRE, LocalDateTime.now());
+            Product p2 = new Product(random.nextInt(1, 15), ProductCategoryEnum.LITRE_AND_HALF, LocalDateTime.now());
+            Product p3 = new Product(random.nextInt(1, 15), ProductCategoryEnum.TEN_LITRES, LocalDateTime.now());
+            Product p4 = new Product(random.nextInt(1, 15), ProductCategoryEnum.NINETEEN_LITRES, LocalDateTime.now());
 
             this.productService.saveAll(List.of(p1, p2, p3, p4));
         }
 
         if (orderService.isRepoEmpty()) {
-            Order o1 = new Order("Order Litre And Half", random.nextInt(1, 16), ProductCategoryEnum.LITRE_AND_HALF, "Test description", LocalDateTime.of(2022, Month.AUGUST, 30, 23, 59), this.getRandomUserEntity(), this.getRandomCustomerEntity());
+            Order o1 = new Order("Order Litre And Half", random.nextInt(16, 116), ProductCategoryEnum.LITRE_AND_HALF, "Test description", LocalDateTime.of(2023, Month.SEPTEMBER, 30, 23, 59), this.getRandomUserEntity(), this.getRandomCustomerEntity());
             o1.setTotalPrice(ProductCategoryEnum.LITRE_AND_HALF.getPrice().multiply(new BigDecimal(o1.getQuantity())));
-            Order o2 = new Order("Order Half Litre", random.nextInt(1, 39), ProductCategoryEnum.HALF_LITRE, "Test description", LocalDateTime.of(2022, Month.AUGUST, 30, 23, 59), this.getRandomUserEntity(), this.getRandomCustomerEntity());
+            Order o2 = new Order("Order Half Litre", random.nextInt(16, 139), ProductCategoryEnum.HALF_LITRE, "Test description", LocalDateTime.of(2023, Month.SEPTEMBER, 30, 23, 59), this.getRandomUserEntity(), this.getRandomCustomerEntity());
             o2.setTotalPrice(ProductCategoryEnum.HALF_LITRE.getPrice().multiply(new BigDecimal(o2.getQuantity())));
-            Order o3 = new Order("Order Nineteen Litres", random.nextInt(1, 115), ProductCategoryEnum.NINETEEN_LITRES, "Test description", LocalDateTime.of(2022, Month.AUGUST, 30, 23, 59), this.getRandomUserEntity(), this.getRandomCustomerEntity());
+            Order o3 = new Order("Order Nineteen Litres", random.nextInt(16, 115), ProductCategoryEnum.NINETEEN_LITRES, "Test description", LocalDateTime.of(2023, Month.SEPTEMBER, 30, 23, 59), this.getRandomUserEntity(), this.getRandomCustomerEntity());
             o3.setTotalPrice(ProductCategoryEnum.NINETEEN_LITRES.getPrice().multiply(new BigDecimal(o3.getQuantity())));
-            Order o4 = new Order("Order Ten Litres", random.nextInt(1, 10), ProductCategoryEnum.TEN_LITRES, "Test description", LocalDateTime.of(2022, Month.AUGUST, 30, 23, 59), this.getRandomUserEntity(), this.getRandomCustomerEntity());
+            Order o4 = new Order("Order Ten Litres", random.nextInt(16, 110), ProductCategoryEnum.TEN_LITRES, "Test description", LocalDateTime.of(2023, Month.SEPTEMBER, 30, 23, 59), this.getRandomUserEntity(), this.getRandomCustomerEntity());
             o4.setTotalPrice(ProductCategoryEnum.TEN_LITRES.getPrice().multiply(new BigDecimal(o4.getQuantity())));
 
             this.orderService.saveAll(List.of(o1, o2, o3, o4));
