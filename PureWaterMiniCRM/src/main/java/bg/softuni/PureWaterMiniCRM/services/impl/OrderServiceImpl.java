@@ -123,7 +123,9 @@ public class OrderServiceImpl implements OrderService {
     private boolean isDeleteSuccess(Long id, Optional<Order> orderOpt) {
         ProductCategoryEnum prodCategory = orderOpt.get().getProdCategory();
         Integer quantityProduced = this.productService.findQuantityProducedOfType(prodCategory);
-
+        if (quantityProduced == null) {
+            return false;
+        }
         int orderQuantity = orderOpt.get().getQuantity();
         if (quantityProduced >= orderQuantity) {
             this.orderRepo.deleteById(id);

@@ -73,7 +73,10 @@ public class ProductServiceImpl implements ProductService {
 
     @Override
     public Integer findQuantityProducedOfType(ProductCategoryEnum type) {
-        Product productEntity = this.productRepo.findByType(type).get();
+        Product productEntity = this.productRepo.findByType(type).orElse(null);
+        if(productEntity == null) {
+            return null;
+        }
         return productEntity.getQuantity();
     }
 
