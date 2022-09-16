@@ -1,6 +1,5 @@
-package bg.softuni;
+package bg.softuni.seleniumwebdrivertests;
 
-import bg.softuni.pages.guest.IndexPage;
 import bg.softuni.pages.guest.LoginPage;
 import bg.softuni.pages.logged.HomePage;
 import org.junit.jupiter.api.Assertions;

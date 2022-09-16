@@ -1,4 +1,4 @@
-package bg.softuni;
+package bg.softuni.seleniumwebdrivertests;
 
 import bg.softuni.pages.guest.IndexPage;
 import org.junit.jupiter.api.Assertions;

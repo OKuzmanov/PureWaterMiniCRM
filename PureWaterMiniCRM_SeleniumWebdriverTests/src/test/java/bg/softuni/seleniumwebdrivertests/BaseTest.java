@@ -1,7 +1,5 @@
-package bg.softuni;
+package bg.softuni.seleniumwebdrivertests;
 
-import org.junit.After;
-import org.junit.Before;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;

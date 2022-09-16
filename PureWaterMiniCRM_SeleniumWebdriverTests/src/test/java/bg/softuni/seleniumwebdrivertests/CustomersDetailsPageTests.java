@@ -1,10 +1,9 @@
-package bg.softuni;
+package bg.softuni.seleniumwebdrivertests;
 
 import bg.softuni.pages.guest.LoginPage;
 import bg.softuni.pages.guest.RegisterPage;
 import bg.softuni.pages.logged.*;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebElement;
 

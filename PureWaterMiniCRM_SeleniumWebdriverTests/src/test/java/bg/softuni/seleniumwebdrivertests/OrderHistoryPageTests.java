@@ -1,7 +1,6 @@
-package bg.softuni;
+package bg.softuni.seleniumwebdrivertests;
 
 import bg.softuni.pages.guest.LoginPage;
-import bg.softuni.pages.logged.AddOrderPage;
 import bg.softuni.pages.logged.OrderHistory;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
