@@ -1,6 +1,7 @@
 package bg.softuni.PureWaterMiniCRM.models.viewModels.rest;
 
 public class UserViewModelRest {
+    private Long id;
     private String username;
 
 
@@ -16,6 +17,14 @@ public class UserViewModelRest {
     private String email;
 
     public UserViewModelRest() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getUsername() {
